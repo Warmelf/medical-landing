@@ -189,7 +189,7 @@ h1 {
 }
 
 .about-cont {
-    background-image: url('images/bg2png.png');
+    background-image: url('images/bg2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -209,7 +209,9 @@ h1 {
 .about-text h2, 
 .about-text img,
 .services-wrapper h2,
-.services-wrapper img {
+.services-wrapper img,
+.price-cont h2,
+.price-cont img {
     margin-bottom: 20px;
     font-family: 'Merriweather', serif;
     font-size: 36px;
@@ -238,7 +240,7 @@ h1 {
     color: #000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 40px;
 }
 
 .services-cont {
@@ -249,23 +251,19 @@ h1 {
 .services-items {
     display: flex;
     margin-top: 20px;
-    justify-content: center;
 }
 
 .services-item {
     text-align: center;
     margin-right: 20px;
-    padding: 10px;
+    padding: 10px 10px 50px 10px;
     width: 250px;
+    position: relative;
 }
 
 .services-item:last-child {
     margin-right: 0;
 }
-/* 
-.services-item img{
-    width: 60px;
-} */
 
 .services-item h3 {
     font-family: 'Merriweather', serif;
@@ -274,6 +272,115 @@ h1 {
 
 .services-item p {
     text-align: left;
+    margin-bottom: 20px;
+}
+
+.services-item div {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.services-item a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    padding: 13px 20px;
+    color: rgb(6, 106, 113);
+    background-color: #c9f1fc;
+    position: relative;
+    border: 1px solid rgb(6, 106, 113);
+    transition: all .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 rgb(6, 106, 113);
+}
+
+.services-item a:hover {
+    border-color: rgb(6, 106, 113);
+    color: #c9f1fc;
+    box-shadow: inset 0 62px 0 0 rgb(6, 106, 113);
+}
+
+#price {
+    background-image: url('images/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.price-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.price-cont__text {
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-blocks {
+    color: #000;
+    background-image: url('images/bg3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding-top: 20px;
+}
+
+.price-item {
+    padding-top: 20px;
+}
+
+.price-item h3{
+    margin: 20px 0;
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+.price-item__blocks {
+    display: flex;
+    justify-content: center;
+}
+
+.price-item__block {
+    width: 250px;
+    padding: 20px 20px 70px 20px;
+    border: 1px solid rgb(6, 106, 113);
+    margin-right: 20px;
+    position: relative;
+    color: #fff;
+}
+
+.price-item__block:last-child {
+    margin-right: 0;
+}
+
+.price-item__block h4 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 15px;
+    
+}
+
+.price-item__block img,
+.price-item__block p {
+    margin-bottom: 15px;
+}
+
+.price-item__price {
+    position: absolute;
+    bottom: 0;
+    color: rgb(40 107 112);
+    font-size: 26px;
+    padding: 10px;
+    background-color: #fff;
 }
 
 
