@@ -350,6 +350,10 @@ h1 {
     justify-content: center;
 }
 
+.price-item__cont {
+    display: flex;
+}
+
 .price-item__block {
     width: 250px;
     padding: 20px 20px 70px 20px;
@@ -361,6 +365,10 @@ h1 {
 
 .price-item__block:last-child {
     margin-right: 0;
+}
+
+.price-item__cont:first-child .price-item__block:last-child {
+    margin-right: 20px;
 }
 
 .price-item__block h4 {
@@ -451,6 +459,7 @@ footer {
 1050px
 970px
 750
+580
 540
 460px
 411px */
@@ -486,11 +495,43 @@ footer {
         width: 40%;
     }
 
+    .reviews-cont {
+        flex-direction: column;
+    }
+
+    .reviews-cont p {
+        margin-right: 0;
+    }
+
+    #drinking .price-item__blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-item__cont .price-item__block:last-child,
+    .price-item__cont:first-child .price-item__block:last-child {
+        margin-right: 0;
+    }
+
+    .price-item__block {
+        margin-bottom: 20px;
+    }
+
+    .greet-img {
+        display: none;
+    }
+
+    .greet-container {
+        justify-content: center;
+    }
+
+    .greet-wrapper {
+        background-size: 170%;
+    }
+ 
 }
 
 @media screen and (max-width: 1050px){
-
-
     .benefits {
         display: block;
     }
@@ -519,7 +560,30 @@ footer {
         display: none;
     }
 
+    .price-cont__text {
+        width: 80%;
+    }
+
+    .price-blocks__desc {
+        flex-direction: column;
+    }
+
+    .price-blocks__text {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .price-blocks__img {
+        display: none;
+    }
+
 }
+
+@media screen and (max-width: 750px){
+    .greet-wrapper {
+        background-size: 2100px;
+    }
+ }
 
 @media screen and (max-width: 750px){
     .burger {
@@ -656,6 +720,25 @@ footer {
 
 }
 
+@media screen and (max-width: 580px){ 
+    .price-item__cont {
+        flex-direction: column;
+    }
+
+    .price-item__block {
+        margin-right: 0;
+    }
+
+    .price-item__blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-item h3 {
+        font-size: 24px;
+    }
+}
+
 @media screen and (max-width: 540px){
     .benefits-cont {
         flex-direction: column;
@@ -663,6 +746,22 @@ footer {
 
     .benefits-item {
         width: 100%;
+    }
+
+    .reviews-cont, .price-cont__text  {
+       width: 90%;
+    }
+
+    .footer-cont {
+        flex-direction: column;
+    }
+
+    .footer-cont div {
+        margin-bottom: 25px;
+    }
+
+    .footer-cont div+p {
+        font-size: 14px;
     }
 
 }
@@ -681,6 +780,22 @@ footer {
 
     .services-item p {
         text-align: left;
+    }
+
+    .price-blocks__text {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .greet-container p {
+        font-size: 20px;
+    }
+
+    #menu__toggle:checked ~ nav {
+        width: 250px;
     }
 }
 
