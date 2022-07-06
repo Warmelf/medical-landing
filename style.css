@@ -16,10 +16,9 @@ header {
     top: 0;
     width: 100%; 
     padding: 20px 0;
-    background-image: url('images/header-bg.png');
+    background-image: url('images/bg/header-bg.png');
     background-position: 50% 50%;
     z-index: 10;
-    /* background-color: rgb(6, 106, 113); */
 }
 
 .header-cont {
@@ -29,19 +28,8 @@ header {
     margin: 0 auto;
 }
 
-.burger {
+#menu__toggle, .menu__btn  {
     display: none;
-    width: 28px;
-    height: 20px;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    z-index: 9;
-}
-
-.burger span {
-    background-color:#fff;
 }
 
 nav ul {
@@ -92,8 +80,19 @@ nav a:hover {
     color: #c9f1fc;
 }
 
+.phone {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone span {
+    font-size: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
 .greet-wrapper {
-    background-image: url('images/bg.png');
+    background-image: url('images/bg/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -189,7 +188,7 @@ h1 {
 }
 
 .about-cont {
-    background-image: url('images/bg2.png');
+    background-image: url('images/bg/bg2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -199,7 +198,6 @@ h1 {
 }
 
 .about-text {
-    /* box-shadow: 0 0 40px 0 rgb(64 64 64 / 25%); */
     padding: 20px;
     width: 30%; 
     color: #000;
@@ -211,7 +209,9 @@ h1 {
 .services-wrapper h2,
 .services-wrapper img,
 .price-cont h2,
-.price-cont img {
+.price-cont img,
+#reviews h2,
+#reviews img {
     margin-bottom: 20px;
     font-family: 'Merriweather', serif;
     font-size: 36px;
@@ -301,8 +301,8 @@ h1 {
     box-shadow: inset 0 62px 0 0 rgb(6, 106, 113);
 }
 
-#price {
-    background-image: url('images/header-bg.png');
+#price, .price-blocks__desc {
+    background-image: url('images/bg/header-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -327,10 +327,6 @@ h1 {
 
 .price-blocks {
     color: #000;
-    background-image: url('images/bg3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
     padding-top: 20px;
 }
 
@@ -383,4 +379,260 @@ h1 {
     background-color: #fff;
 }
 
+.price-blocks__desc {
+    margin: 40px 0;
+    padding: 40px 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.price-blocks__text {
+    width: 40%;
+    margin-right: 20px;
+}
+
+.price-blocks__img {
+    width: calc(40% - 20px);
+    max-width: 520px;
+}
+
+.price-blocks__img img {
+    width: 100%;
+}
+
+#reviews {
+    padding: 20px 0;
+    color: #000;  
+    text-align: center;
+}
+
+.reviews-cont {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+ 
+.reviews-cont p {
+    box-shadow: 0 0 40px 0 rgb(0 109 113 / 64%);
+    padding: 20px;
+    margin: 20px 40px 20px 0;
+    text-align: left;
+    min-width: 220px;
+}
+
+.reviews-cont p:last-child {
+    margin-right: 0;
+}
+
+footer {
+    width: 100%; 
+    padding: 20px 0;
+    background-image: url('images/bg/header-bg.png');
+    background-position: 50% 50%;
+}
+
+.footer-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* БРЕЙКИ
+1110px
+1050px
+970px
+750
+540
+460px
+411px */
+
+@media screen and (max-width: 1110px){
+    .about-gallery {
+        width: 35%;
+    }
+
+    .about-text {
+        width: 40%; 
+    }
+
+}
+
+@media screen and (max-width: 1050px){
+    
+
+    .benefits {
+        display: block;
+    }
+
+    .benefits-cont {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 970px){
+    .about-cont {
+        flex-direction: column;
+    }
+
+    .about-gallery {
+        width: 80%;
+    }
+
+    .about-text {
+        width: 80%; 
+        margin-top: 20px;
+    }
+
+    .about-gallery__item:last-child {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 750px){
+    .burger {
+        position: fixed;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    .header-cont {
+        justify-content: flex-end;
+    }
+
+    #menu__toggle {
+        display: block;
+        position: fixed;
+        opacity: 0;
+        top: 30px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 30px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+		transform: rotate(45deg);
+	}
+	#menu__toggle:checked ~ .menu__btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	}
+	#menu__toggle:checked ~ .menu__btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+	#menu__toggle:checked ~ nav {
+        display: block;
+        position: fixed;
+		left: 0;
+        top: 87px;
+        width: 300px;
+        height: calc(100% - 87px);
+        background-image: url('images/bg/header-bg-mobile.png');
+        background-position: 50% 50%;
+	}
+
+    #menu__toggle:checked ~ nav ul{
+        flex-direction: column;
+	}
+
+    nav a {
+        padding: 20px 40px;
+    }
+
+    .about-gallery__item {
+        display: none;
+    }
+
+    .about-text  {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .about-gallery {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 540px){
+    .benefits-cont {
+        flex-direction: column;
+    }
+
+    .benefits-item {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 460px){
+    .about-text h2, 
+    .about-text img,
+    .services-wrapper h2,
+    .services-wrapper img,
+    .price-cont h2,
+    .price-cont img,
+    #reviews h2,
+    #reviews img {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 411px){
+    .about-text h2, 
+    .about-text img,
+    .services-wrapper h2,
+    .services-wrapper img,
+    .price-cont h2,
+    .price-cont img,
+    #reviews h2,
+    #reviews img {
+        font-size: 28px;
+    }
+
+    .about-text  {
+        width: 95%;
+    }
+}

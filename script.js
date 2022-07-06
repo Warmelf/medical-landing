@@ -8,7 +8,6 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         const scrollTarget = document.getElementById(href);
 
         const topOffset = document.querySelector('.scrollto').offsetHeight;
-        //const topOffset = 0; // если не нужен отступ сверху 
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
 
@@ -18,3 +17,10 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+
+let menuToggle = document.querySelector('#menu__toggle');
+let main = document.querySelector('main');
+
+main.addEventListener('click', function() {
+    menuToggle.checked = false;
+})
