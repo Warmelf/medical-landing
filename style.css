@@ -250,19 +250,23 @@ h1 {
 
 .services-items {
     display: flex;
-    margin-top: 20px;
+}
+
+.services-items__cont {
+    display: flex;
 }
 
 .services-item {
     text-align: center;
-    margin-right: 20px;
-    padding: 10px 10px 50px 10px;
-    width: 250px;
+    padding: 10px 20px 50px 20px;
+    width: 260px;
     position: relative;
+    border-right: 1px solid rgb(6, 106, 113);;
 }
 
-.services-item:last-child {
+.services-items__cont:last-child .services-item:last-child {
     margin-right: 0;
+    border-right: none;
 }
 
 .services-item h3 {
@@ -460,10 +464,32 @@ footer {
         width: 40%; 
     }
 
+    .services-items {
+        flex-direction: column;
+    }
+
+    .services-items__cont {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .services-items__cont:first-child {
+        border-bottom: 1px solid rgb(0 109 113 / 64%);
+    }
+
+    .services-item:last-child {
+        border-right: none;
+    }
+
+    .services-item {
+        width: 40%;
+    }
+
 }
 
 @media screen and (max-width: 1050px){
-    
+
 
     .benefits {
         display: block;
@@ -594,6 +620,40 @@ footer {
         margin: 0;
     }
 
+    .services-items__cont {
+        flex-direction: column;
+    }
+
+    .services-items__cont:first-child {
+        border-bottom: none;
+    }
+
+    .services-item {
+        border-bottom: 1px solid rgb(0 109 113 / 64%);
+        border-right: none;
+        padding-bottom: 70px;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    .services-items__cont {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    .services-item p {
+        text-align: center;
+    }
+
+    .services-item div {
+        bottom: 20px;
+    }
+
+    .services-items__cont:last-child .services-item:last-child {
+        border-bottom: none;
+    }
+
 }
 
 @media screen and (max-width: 540px){
@@ -617,6 +677,10 @@ footer {
     #reviews h2,
     #reviews img {
         font-size: 32px;
+    }
+
+    .services-item p {
+        text-align: left;
     }
 }
 
